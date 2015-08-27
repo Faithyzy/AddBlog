@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Addblog by Faithyzy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Addblog</h1>
+      <h2 class="project-tagline">学一下怎么用GitHub写博客</h2>
+      <a href="https://github.com/Faithyzy/AddBlog" class="btn">View on GitHub</a>
+      <a href="https://github.com/Faithyzy/AddBlog/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Faithyzy/AddBlog/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="addblog" class="anchor" href="#addblog" aria-hidden="true"><span class="octicon octicon-link"></span></a>AddBlog</h1>
+
+<p>学一下怎么用GitHub写博客</p>
+
+<p>创建GitHub技术博客全攻略   <a href="http://blog.csdn.net/renfufei/article/details/37725057/">http://blog.csdn.net/renfufei/article/details/37725057/</a></p>
+
+<p>说明: 首先,你需要注册一个 github 账号,最好取一个有意义的名字,比如姓名全拼,昵称全拼,如果被占用,可以加上有意义的数字.
+本文中假设用户名为 tiemaocsdn</p>
+
+<ol>
+<li>注册账号:
+地址: <a href="https://github.com/">https://github.com/</a>
+输入账号、邮箱、密码,然后点击注册按钮.</li>
+</ol>
+
+<p>图1 第1步
+2. 初始设置
+注册完成后,选择Free免费账号完成设置。</p>
+
+<p>图2 第2步
+2.1 验证邮箱
+请打开你的邮箱，查看发送给你的确认邮件，你需要验证邮箱后,后面生成的个人主页才会被接受和发布.</p>
+
+<ol>
+<li>创建页面仓库
+地址: <a href="https://github.com/new">https://github.com/new</a>
+这个仓库的名字需要和你的账号对应， 如 tiemaocsdn.github.io
+输入基本信息,然后点击创建仓库.</li>
+</ol>
+
+<p>图3 第3步
+4. 进入项目设置页面
+因为这个项目就是专门的放页面的,所以master分支即可. 如果是你的某个仓库的页面,你需要设置到 gh-pages 分支中,关于这些,请参考本文末尾提到的参考资料.</p>
+
+<p>图4 第4步</p>
+
+<ol>
+<li>进入自动页面生成器
+在设置页面,下拉到底部, 默认分支(master)不用管.</li>
+</ol>
+
+<p>图5 第5步</p>
+
+<p>6.1 创建用户页面(即技术博客站点)
+输入一些内容,可以自己编辑,也可以从readme加载：</p>
+
+<p>图6-1 第6-1步</p>
+
+<p>6.2 继续,选择主题</p>
+
+<p>图6-2 第6-2步</p>
+
+<ol>
+<li>选择主题,然后发布
+如下图所示,其实这些以后你都可以自己修改替换,这只是生成一些css,html,img到你的仓库里面.</li>
+</ol>
+
+<p>图7 第7步</p>
+
+<ol>
+<li>查看效果
+现在,你可以访问自己的GitHub.io 上的主页了，例如：
+<a href="http://tiemaocsdn.github.io/">http://tiemaocsdn.github.io/</a>
+页面效果如下图所示:</li>
+</ol>
+
+<p>图8 第8步</p>
+
+<ol>
+<li>CNAME绑定域名</li>
+</ol>
+
+<p>到这一步,其实已经很明确了, <a href="http://tiemaocsdn.github.io/">http://tiemaocsdn.github.io/</a> 这么一个域名，就指向了刚刚构建的这个站点/页面。 如果嫌弃这个域名太土了怎么办? </p>
+
+<p>其实很好办，花钱买个喜欢的域名映射过去就好了。 在根路径下创建一个文件, 文件名是大写的 "CNAME", 注意没有后缀。 因为tiemaocsdn 没有购买域名，那么就拿另一个来说事吧。</p>
+
+<p>类似下面这样：</p>
+
+<p><a href="https://github.com/renfufei/renfufei.github.io/blob/master/CNAME">https://github.com/renfufei/renfufei.github.io/blob/master/CNAME</a></p>
+
+<p>里面的内容，就是访问此 xxx.github.io 时会重定向到此域名，所以其实这个地址可以是任意值。 但是为了有意义，我们可以定义为某个固定的域名，例如 :</p>
+
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片
+blog.cncounter.com<br>
+文件的内容只有一行，这样访问 <a href="http://renfufei.github.io">http://renfufei.github.io</a> 时浏览器就接收到重定向指令,跳转到CNAME里面指定的域名去了。<br>
+大致的响应头和状态码如下，你也可以使用Chrome打开NetWork，勾选上 Preserve Log 保留日志看一看相关信息：</p>
+
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片
+Request URL:<a href="http://renfufei.github.io/">http://renfufei.github.io/</a><br>
+Request Method:GET<br>
+Status Code:301 Moved Permanently  </p>
+
+<p>Location:<a href="http://blog.cncounter.com/">http://blog.cncounter.com/</a><br>
+Server:GitHub.com<br>
+这样就很明白了，访问此站点时，如果域名不是 blog.cncounter.com ,那么就会跳转到 <a href="http://blog.cncounter.com/%EF%BC%8C%E4%B8%AA%E4%BA%BA%E6%81%B6%E6%84%8F%E6%8E%A8%E6%B5%8B,%E5%8D%B3%E4%BE%BF%E4%BD%A0%E5%B0%86CNAME%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%E8%AE%BE%E7%BD%AE%E4%B8%BA">http://blog.cncounter.com/，个人恶意推测,即便你将CNAME文件的内容设置为</a> <a href="http://www.baidu.com">www.baidu.com</a> 也是可行的，这样访问的时候直接跳转到百度了。
+但是，如果 <a href="http://blog.cncounter.com/">http://blog.cncounter.com/</a> 是空的怎么办?  这就需要你自己保证咯。
+当然，要是这么结束掉，那本文就是一篇坑文。 
+如果你持有这个域名，那么你可以将域名的对应记录也CNAME到 "renfufei.github.io" . 记住， renfufei.github.io 已经是一个互联网上能明确定位到的地址，所以DNS记录完全可以映射到此路径.</p>
+
+<p>例如如下的记录， DNS中，A记录那就是直接指定一个IP。 CNAME就是重命名，指向另一个域名。 主机记录就是前缀，例如: blog, 与 cncounter.com 拼接在一起就是 blog.cncounter.com ，如果你想映射 <a href="http://www.cncounter.com">www.cncounter.com</a> ，那么主机记录就是 www ,记录类型是CNAME，记录值是renfufei.github.io；如果想将 <a href="http://cncounter.com">http://cncounter.com</a> 这个根域名也映射到，那么记录类型也是CNAME,主机记录就是一个英文的 at: "@". 你可以将多个域名都映射到 xxxxx.github.io 之类的你自己的站点上，但原则上都会跳转到你新建的 CNAME文件中的域名上。【放心，不会死循环。。。】.好的，恭喜你!</p>
+
+<p>注意事项:
+如果报404，或者其他错误,请稍等,或者检查你的邮箱，看看构建失败的提示信息.
+比如我的,因为最初没有验证邮箱,结果收到了好几次发布失败的通知(如下面的邮件提示)。
+以后每次你提交(或在线修改后提交)文件到这个仓库,GitHub 都会自动为你构建,并发布。
+所以,有问题,请修改并提交某个文件，重新试试吧！
+[plain] view plaincopy在CODE上查看代码片派生到我的代码片
+The page build failed with the following error:  </p>
+
+<p>You need a verified email address in your GitHub account to publish Pages.<br>
+You can verify your email addresses from your Settings panel:  </p>
+
+<pre><code>https://github.com/settings/emails  
+</code></pre>
+
+<p>If you have any questions please contact us at <a href="https://github.com/contact">https://github.com/contact</a>.  </p>
+
+<p>下面是参考的一部分:</p>
+
+<p>您可以通过GitHub的页面自动生成器快速为 项目,用户(User,比如你的账号),或组织(Organization, 比如 alibaba) 创建一个网站(其实就是技术博客啦)。</p>
+
+<p>生成用户/组织的网页</p>
+
+<p>要生成用户/组织的网站页面,你需要创建一个仓库(repository,代码库),名为: username.github.io 或 orgname.github.io ； 用户名或组织名 必须 是你自己的账号/或所属的组织, 否则GitHub Pages 站点不会帮你生成(build,构建,编译,)。 GitHub的页面自动生成器可以通过仓库的设置页面(Settings page)看到。 您可以阅读更多关于用户和组织页面的内容 。</p>
+
+<p>警告: GitHub页面网站在互联网上是公开,即使其所属的仓库是私有的。 如果你有敏感数据在页面仓库中,您可能需要在发布之前删除他们。</p>
+
+<p>参考地址:
+Categories / GitHub Pages Basics
+User, Organization, and Project Pages
+Creating Pages with the automatic generator
+如果你看到这里,如果你已登录, 如果觉得对你有帮助,请点击下面的 “顶” 按钮.
+如果有问题,有建议,请留言。</p>
+
+<p>赶快试试吧！</p>
+
+<p>GitHub.io技术博客的好处: 写博客,你可以自己定义JS，CSS，图片,嵌入iframe 显示代码示例,什么你都可以自定义,什么标签都允许,而在其他的技术博客站点,因为安全限制,很多是不允许的。</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Faithyzy/AddBlog">Addblog</a> is maintained by <a href="https://github.com/Faithyzy">Faithyzy</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
